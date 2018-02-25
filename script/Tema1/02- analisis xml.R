@@ -28,18 +28,21 @@ head(most_populate, 3)
 
 tables
 
-# prova wiki
+# prova marca
 
 url_marca <- "http://www.marca.com/futbol/primera-division/clasificacion.html"
-clasificacion <- readHTMLTable(url_marca,which = 1,  skip.rows = c(1,2),
-                            header = (cap)         
+clasificacion <- readHTMLTable(url_marca,which = 1,  skip.rows = c(1,2)
                             )
-
-cap <- c("Clasificación","equipo","PJ","PG" ,"PE", "PP",
-         "GF","GC","PT","PJ","PG","PE","PP","GF","GC",
-         "PT","PJ","PG","PE","PP","GF", "GC", "PT"
+# per caviar el nom a les varaibles
+colnames(clasificacion) <- c("Clasificación","equipo","PJ","PG" ,"PE", "PP",
+                             "GF","GC","PT","PJ","PG","PE","PP","GF","GC",
+                             "PT","PJ","PG","PE","PP","GF", "GC", "PT"
 )
 
-cap
+acap
 wiki_table[1]
 head(wiki_table,1)
+
+help(header
+     )
+??header
