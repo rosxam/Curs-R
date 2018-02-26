@@ -20,6 +20,22 @@ rand.impute <- function(x) {
 
 random.impute.datafrme <- function(dataframe,cols){
   names<- names(dataframe)
-  
+  for (col in cols) {
+    name <-paste (names[col],"imputed",sep = ".")
+    dataframe[name] = rand.impute(dataframe[,col])
+  }
+  dataframe
 }
+
+data <- read.csv("../data/tema1/missing-data.csv", na.strings = "")
+
+data$Income[data$Income==0] <- NA
+
+data <- random.impute.datafrme(data, c(1,2))
+
+help(col)
+cols(data)
+
   
+names <- names(data)
+names
